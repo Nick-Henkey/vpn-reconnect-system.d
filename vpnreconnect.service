@@ -1,0 +1,12 @@
+[Unit]
+Description=Automatically reconnects to OpenVPN
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=root
+WorkingDirectory = /usr/bin
+ExecStart=/bin/bash vpn_reconnect
+Type=simple
+Restart=on-failure
